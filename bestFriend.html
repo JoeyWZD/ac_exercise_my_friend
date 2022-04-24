@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp9NSCFEksbGUHvRo3-jGMkRo-zOqgSzxthg&usqp=CAU"
+            alt="" width="30" height="24" class="card-img-fluid">
+          Joey Friends List
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Best Friend</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <!-- 搜尋欄 -->
+    <form class="row row-cols-lg-auto g-3 align-items-center mb-2" id="search-form">
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputGroupUsername">Keyword</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="input-value" placeholder="Name">
+        </div>
+      </div>
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+        <select class="form-select" id="inlineFormSelectPref">
+          <option selected>All</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-info" id="form-search">Search</button>
+      </div>
+      <div class="col-12">
+        <button type="buttom" class="btn btn-dark" id="form-back">back</button>
+      </div>
+    </form>
+
+
+
+
+    <!-- 朋友名單 -->
+    <div class="row" id="friend-list">
+      <!-- 在js做替換 -->
+    </div>
+  </div>
+
+  <!-- modal文件 -->
+  <div class="modal fade" id="friend-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="friend-modal-title">username Name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="" alt="" id="friend-modal-image">
+            </div>
+            <div class="col-sm-6" id="friend-modal-description">
+              <p id="friend-modal-id">id</p>
+              <p id="friend-modal-gender">gender</p>
+              <p id="friend-modal-age">age</p>
+              <p id="friend-modal-birthday">birthday</p>
+              <p id="friend-modal-region">region</p>
+              <p id="friend-modal-email">email</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" id="friend-modal-add-button">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+    </script>
+  <script src="./bestFriend.js"></script>
+</body>
+
+</html>
